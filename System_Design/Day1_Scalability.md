@@ -1,4 +1,4 @@
-# Scalability Notes (Harvard Lecture)
+# Scalability Notes 
 
 ## 1. Vertical Scaling (Scaling Up)
 - **Definition:** Increasing the power of a single machine (CPU, RAM, SSD, etc.).  
@@ -72,7 +72,7 @@
 
 ---
 
-## 🔑 Quick Visual Mental Model
+## Quick Visual Mental Model
 - **Vertical scaling = bigger computer**  
 - **Horizontal scaling = more computers**  
 - **Caching = shortcuts to avoid repeating work**  
@@ -81,6 +81,6 @@
 
 ---
 
-## 📚 References
+##  References
 - Harvard CS Scalable Systems Lecture
 - [System Design Primer](https://github.com/donnemartin/system-design-primer)
