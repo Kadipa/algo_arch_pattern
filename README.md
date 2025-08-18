@@ -1,4 +1,20 @@
-# design_pattern_learning
-Learning about the design pattern and notes 
+# Design Pattern, System Design, and DSA Practice
 
-I read about the design pattern from (this)[https://refactoring.guru/design-patterns] and decided to learn and wrote notes as well as the simple use case to understand the concept. 
+This repo contains my personal learning journey in three key areas:
+- **DSA (Data Structures & Algorithms)**
+- **Design Patterns**
+- **System Design**
+
+## Learning Resources
+- **DSA:** NeetCode 150, LeetCode
+- **Design Patterns:** [Refactoring.Guru](https://refactoring.guru/design-patterns), Head First Design Patterns
+- **System Design:** System Design Primer (GitHub), Grokking System Design Interview
+
+## Plan
+- Commit **15 minutes minimum per day** for the next **6 months**.
+- Mix between:
+  - Reading about a design pattern/system design concept  
+  - Practicing DSA problems  
+  - Writing notes and simple use cases
+
+
