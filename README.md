@@ -8,7 +8,7 @@ This repo contains my personal learning journey in three key areas:
 ## Learning Resources
 - **DSA:** NeetCode 150, LeetCode
 - **Design Patterns:** [Refactoring.Guru](https://refactoring.guru/design-patterns), Head First Design Patterns
-- **System Design:** System Design Primer (GitHub), Grokking System Design Interview
+- **System Design:** [System Design Primer] (https://github.com/donnemartin/system-design-primer), Grokking System Design Interview
 
 ## Plan
 - Commit **15 minutes minimum per day** for the next **6 months**.
