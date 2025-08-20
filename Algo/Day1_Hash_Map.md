@@ -28,7 +28,9 @@ Output: false
 
 ### One Line Solution
 
-```javascript const containsDuplicate = nums => new Set(nums).size !== nums.length;```
+```javascript
+ const containsDuplicate = nums => new Set(nums).size !== nums.length;
+ ```
 
 
 ## 2. Valid Anagram
