@@ -28,7 +28,7 @@ Output: false
 
 ### One Line Solution
 
-const containsDuplicate = nums => new Set(nums).size !== nums.length;
+```javascript const containsDuplicate = nums => new Set(nums).size !== nums.length;```
 
 
 ## 2. Valid Anagram
@@ -68,6 +68,7 @@ Space: O(1) (since only 26 lowercase letters)
 
 ### Solution
 
+```javascript 
 function isAnagram(s, t) {
   if (s.length !== t.length) return false;
 
@@ -86,3 +87,4 @@ function isAnagram(s, t) {
 
   return true;
 }
+```
