@@ -74,3 +74,140 @@ function twoSum(nums, target) {
   }
 ```
 
+
+## Extra Notes
+
+### Overview
+
+- Set: Stores unique values. No key–value mapping.
+- Object {}: Simple key–value dictionary with string (or symbol) keys.
+- Map: Key–value dictionary with keys of any type and predictable iteration.
+
+### 1) Set
+
+- Track uniqueness and test membership in O(1) average time.
+
+```javascript 
+const set = new Set();
+
+// add
+set.add(1);
+set.add(1);        // ignored (already present)
+
+// check
+set.has(1);        // true
+set.has(2);        // false
+
+// size
+set.size;          // 1
+
+// delete
+set.delete(1);     // true
+
+// iterate
+for (const v of set) {
+  // use v
+}
+
+// convert
+const unique = [...new Set([1, 2, 2, 3])]; // [1,2,3]
+```
+
+#### Common Use Cases
+
+- Remove duplicates from an array.
+- Check if an element has been seen before.
+- Set operations (union/intersection/difference) with small helpers.
+
+### 2) Plain Object {}
+
+- Lightweight hash table for string keys (common in coding challenges, e.g., frequency counters).
+
+```javascript 
+const obj = {};
+
+// set/update
+obj["a"] = (obj["a"] || 0) + 1;
+
+// get
+const countA = obj["a"];       // 1
+
+// existence
+("a" in obj);                  // true
+("b" in obj);                  // false
+
+// delete
+delete obj["a"];
+
+// iterate keys/values
+for (const k in obj) {
+  const v = obj[k];
+}
+
+Object.keys(obj);              // array of keys
+Object.values(obj);            // array of values
+Object.entries(obj);           // [ [k, v], ... ]
+```
+
+- Keys are strings (numbers are coerced to strings).
+- Avoid prototype collisions if using untrusted keys (or use Object.create(null) to create a “bare” dictionary with no prototype).
+
+```javascript 
+const dict = Object.create(null);
+dict["a"] = 1;
+("toString" in dict); // false
+```
+
+#### Common Use Cases
+
+- Character frequency counting.
+- Simple maps from small strings to numbers.
+- Fast and concise in algorithm problems.
+
+### 3) Map
+
+- Hash table with keys of any type and reliable insertion order iteration.
+
+```javascript 
+const map = new Map();
+
+// set/update
+map.set("a", 1);
+map.set(2, "two");
+map.set({ x: 1 }, "obj");
+
+// get
+map.get("a");     // 1
+map.get(2);       // "two"
+
+// existence
+map.has("a");     // true
+map.has("z");     // false
+
+// size
+map.size;         // 3
+
+// delete
+map.delete("a");  // true
+
+// iterate
+for (const [k, v] of map) {
+  // use k, v
+}
+
+// convert
+const fromPairs = new Map([["a", 1], ["b", 2]]);
+```
+
+#### Common Use Cases
+
+- Keys not limited to strings (e.g., numbers, objects, tuples).
+- Safer than {} for arbitrary keys (no prototype issues).
+- When you need predictable iteration order of insertions.
+
+### Choosing Between Them
+
+- Uniqueness/membership only	Set
+- Simple string-key frequency counts	Object {}
+- Arbitrary key types or safer mapping
+
