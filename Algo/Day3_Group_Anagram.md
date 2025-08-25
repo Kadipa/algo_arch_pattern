@@ -81,3 +81,29 @@ Sorting approach: O(m · n log n)
 Frequency array approach: O(m · n)
 
 Extra space: O(m) for storing groups
+
+### Solution
+
+```javascript 
+class Solution {
+    /**
+     * @param {string[]} strs
+     * @return {string[][]}
+     */
+    groupAnagrams(strs) {
+
+        const groups = new Map();
+
+        strs.forEach((word)=>{
+            const counts = new Array(26).fill(0);
+            for(let i= 0; i < word.length; i++){
+                counts[word.charCodeAt(i)-97]++;
+            }
+            const key = counts.join("#");
+            if(!groups.has(key)) groups.set(key,[])
+             groups.get(key).push(word)
+        })
+        return Array.from(groups.values())
+    }
+}
+```
