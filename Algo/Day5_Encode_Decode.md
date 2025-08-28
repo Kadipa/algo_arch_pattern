@@ -78,3 +78,42 @@ Example:
 - **Encoding:** O(m)  
 - **Decoding:** O(m)  
 - **Space:** O(m + n)
+
+### Solution
+
+```javascript
+class Solution {
+    /**
+     * @param {string[]} strs
+     * @returns {string}
+     */
+    encode(strs) {
+      let res = "";
+      strs.forEach((str)=>{
+        res += str.length + "#" + str;
+      })
+      return res;
+    }
+
+    /**
+     * @param {string} str
+     * @returns {string[]}
+     */
+    decode(str) {
+        let result = [];
+        let index =0;
+        while(index < str.length){
+            let j = index;
+            while (str[j] !== "#"){
+                j++;
+            }
+
+            let length = parseInt( str.slice(index, j));
+            let s = str.slice(j+1, j+1+length);
+            result.push(s);
+            index = j+1+length;
+        }
+        return result
+    }
+}
+```
